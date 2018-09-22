@@ -4,11 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Todos</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+            <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('/css/datepicker.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/bootstrap-timepicker.min.css') }}" rel="stylesheet" type="text/css">
+
+    <link href="{{ asset('/css/dataTables.bootstrap.css') }}" rel="stylesheet">    
+    <!-- Custom CSS -->  
+    <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
@@ -65,9 +72,11 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <div class="content">
                 <div class="title m-b-md">
                     @yield('content')
                 </div>
+            </div>
         </div>
     </body>
 </html>
