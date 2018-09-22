@@ -31,11 +31,16 @@ class TodosController extends Controller
 	}
 
 	public function save(Request $request , $id){
-    $todo = Todo::find($id);
-    $todo->todo = $request->todo;
-    $todo->save();
-    return redirect()->route('todos');
+    	$todo = Todo::find($id);
+    	$todo->todo = $request->todo;
+    	$todo->save();
+    	return redirect()->route('todos');
 	}
 
-
+	public function complete($id){
+    	$todo = Todo::find($id);
+    	$todo->completed = 1;
+    	$todo->save();
+    	return redirect()->route('todos');
+	}
 }
